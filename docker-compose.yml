@@ -12,7 +12,7 @@ services:
       EMAIL_USER: viodjunaidy@gmail.com
       EMAIL_PASS: hhxk pewr gxyv tvih
     ports:
-      - "3002:3002"
+      - "3084:3084"
 
   frontend:
     image: viondjunaidy/todolist-frontend:latest
@@ -20,4 +20,4 @@ services:
     depends_on:
       - backend
     ports:
-      - "3001:3001"
+      - "3083:3083"
