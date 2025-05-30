@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  backend:
+    image: viondjunaidy/todolist-backend:latest
+    restart: always
+    environment:
+      PORT: 3084
+      CONNECTION_URL: mongodb+srv://vionadjunaidy:a324403Z@cluster0.5wjix.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      REFRESH_TOKEN_SECRET: 1234567890
+      ACCESS_TOKEN_SECRET: abcdefghijklmnop
+      EMAIL_USER: viodjunaidy@gmail.com
+      EMAIL_PASS: hhxk pewr gxyv tvih
+    ports:
+      - "3002:3002"
+
+  frontend:
+    image: viondjunaidy/todolist-frontend:latest
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3001:3001"
