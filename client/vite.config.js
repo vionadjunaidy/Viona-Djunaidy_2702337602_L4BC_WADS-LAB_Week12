@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       proxy: {
         "/service": {
           target: mode === "development"
-            ? "http://localhost:5000"
+            ? "http://localhost:5002"
             : "https://e2425-wads-l4bcg2-server-viona.csbihub.id",
           changeOrigin: true,
           secure: mode !== "development",
