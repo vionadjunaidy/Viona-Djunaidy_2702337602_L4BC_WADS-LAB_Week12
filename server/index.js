@@ -22,7 +22,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(cookieParser());
-app.use("/api/auth", router);
+app.use("/service", router);
 
 const CONNECTION_URL = process.env.CONNECTION_URL
 const PORT = process.env.PORT
