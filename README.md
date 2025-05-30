@@ -5,6 +5,7 @@ This document provides detailed information about the creation of the logout end
 ### 1. Log Out Endpoint
 - **Endpoint**: `POST /api/users/logout`
 - **Signin Example**:
+  ![](Documentation/sign-in.png)
 - **Authorization using token Example**:
 - **Logout Example**:
 
