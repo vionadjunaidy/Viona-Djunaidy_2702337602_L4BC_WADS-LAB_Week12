@@ -33,7 +33,7 @@ export const verifyOTP = createAsyncThunk(
   'auth/verifyOTP',
   async ({ email, otp }, { rejectWithValue }) => {
     try {
-      const { data } = await api.post('/api/auth/verify-otp', { email, otp });
+      const { data } = await api.post('/service/verify-otp', { email, otp });
       return data;
     } catch (error) {
       return rejectWithValue(error.response?.data || { message: 'OTP verification failed' });
